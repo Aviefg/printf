@@ -13,11 +13,22 @@
 
 int _printf(const char *format, ...);
 int (*check_specifier(const char *))(va_list);
+int _putchar(char c);
 int print_str(va_list args);
 int print_char(va_list args);
 int print_cent(va_list args);
-int print_int(va_list);
-int print_dec(va_list);
+int print_int(va_list args);
+int print_dec(va_list args);
+int print_u(va_list unsign);
+int print_b(va_list bin);
+int print_r(va_list rev);
+int print_p(va_list p);
+unsigned long _pow(unsigned int base, unsigned int exponent);
+int print_o(va_list oct);
+int print_S(va_list S);
+int print_d(va_list dig);
+
+
 typedef struct print_handler
 {
 	const char *specifier;
