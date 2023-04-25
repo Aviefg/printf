@@ -27,7 +27,11 @@ unsigned long _pow(unsigned int base, unsigned int exponent);
 int print_o(va_list oct);
 int print_S(va_list S);
 int print_d(va_list dig);
-
+int print_hex(unsigned int n, unsigned int c);
+int print_X(va_list X);
+int print_x(va_list x);
+int hex_print(char c);
+int print_R(va_list R);
 
 typedef struct print_handler
 {

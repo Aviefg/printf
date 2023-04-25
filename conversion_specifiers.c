@@ -12,7 +12,7 @@
 static print_handler handlers[14] = {
 	{"c", print_char},
 	{"s", print_str},
-	{"i", print_i},
+	{"i", print_int},
 	{"d", print_d},
 	{"b", print_b},
 	{"u", print_u},

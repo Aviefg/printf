@@ -22,8 +22,8 @@ int print_hex(unsigned int n, unsigned int c)
 	a[0] = n / j;
 	for (i = 1; i < 8; i++)
 	{
-		m /= 16;
-		a[i] = (n / m) % 16;
+		j /= 16;
+		a[i] = (n / j) % 16;
 	}
 	for (i = 0, sum = 0, count = 0; i < 8; i++)
 	{
