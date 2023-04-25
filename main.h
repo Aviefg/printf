@@ -1,5 +1,3 @@
-IN_H_
-
 #include <stdarg.h>
 #include <stdlib.h>
 #include <stdio.h>
