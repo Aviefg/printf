@@ -1,17 +1,22 @@
-#include "main1.h"
+#include <stdarg.h>
+#include <stdio.h>
+#include <unistd.h>
+#include "main.h"
 
 /**
- * _printf - prints a formatted a string
- * @format: prints the (char *)
- * @...unknown variadic parameters
- * Return: printed number of characters
-*/
+ * _printf - this prints a string in a format
+ * @format: string to print (char *)
+ * @...: variadic parameters (unknown)
+ *
+ * Return: count
+ */
+
 int _printf(const char *format, ...)
 {
 	int i = 0;
 	int count = 0;
 	int value = 0;
-	int (*f)(va_list);
+	int (*n)(va_list);
 	va_list args;
 
 	va_start(args, format);
@@ -28,10 +33,10 @@ int _printf(const char *format, ...)
 		}
 		if (format[i] == '%')
 		{
-			f = check_specifier(&format[i + 1]);
-			if (f != NULL)
+			n = check_specifier(&format[i + 1]);
+			if (n != NULL)
 			{
-				value = f(args);
+				value = n(args);
 				count = count + value;
 				i = i + 2;
 				continue;
